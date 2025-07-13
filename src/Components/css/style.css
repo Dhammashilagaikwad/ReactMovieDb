@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #272B34;
+}
+
+.navbar{
+    background-color: #33393F;
+    
+}
+
+.singlemovie{
+    background-color: #020B17;
+}
+
+.collapse{
+    margin-left: 480px;
+
+}
