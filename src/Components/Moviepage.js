@@ -10,7 +10,7 @@ export default function Moviepage() {
 
 
     let urlValue = useParams();
-    console.log(urlValue['movieid']);
+    // console.log(urlValue['movieid']);
 
     useEffect(() => {
         var castApi = `https://api.themoviedb.org/3/movie/${urlValue['movieid']}/credits?api_key=f6866ecb64af726c47ad422d7b08e283&language=en-US`;
@@ -46,7 +46,7 @@ export default function Moviepage() {
                 </div>
 
                 <div className='col-3 me-0'>
-                    <img src={"https://image.tmdb.org/t/p/w500" + info.poster_path} className='img-fluid rounded border-none' />
+                    <img src={"https://image.tmdb.org/t/p/w500" + info.poster_path} className='img-fluid rounded border-none' alt='movieimage' />
                 </div>
             </div>
 

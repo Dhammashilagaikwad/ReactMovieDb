@@ -6,4 +6,4 @@ async function fetchdata(apipath) {
   
 }
 
-export default fetchdata;
+export default fetchdata;

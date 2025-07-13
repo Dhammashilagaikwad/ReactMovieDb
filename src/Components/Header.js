@@ -10,7 +10,7 @@ function Header() {
     function searchData(ev) {
         ev.preventDefault();
      
-        if(data!=""){
+        if(data!==""){
             navigate("/searchdata/"+data)
         }else{
             alert("Movie name required");

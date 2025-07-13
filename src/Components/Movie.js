@@ -19,7 +19,7 @@ export default function Movie({ p1 }) {
                     }) => (
                         <div className='col-3 text-center mt-5 g-5'>
                             <Link to={"/single-movie/"+id}>
-                            <img src={"https://image.tmdb.org/t/p/w500" + poster_path} className='img-fluid rounded shadow-lg' />
+                            <img src={"https://image.tmdb.org/t/p/w500" + poster_path} className='img-fluid rounded shadow-lg' alt='movie' />
                            </Link>
                             <p>{original_title}</p>
                             <p>{vote_average.toFixed(1)}</p>
