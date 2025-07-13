@@ -31,7 +31,7 @@ export default function Moviepage() {
                 console.log(result);
                 setInfo(result);
             })
-    }, ['movieid'])
+    }, [movieid])
 
     return (
         <div className='container'>

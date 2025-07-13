@@ -11,7 +11,7 @@ function useFetchData(apiPath, extra = []) {
                 console.log(data.results);
                 setRecord(data.results);
             })
-    }, [apiPath, ...extra]);
+    }, [apiPath, extra]);
     return record;
 }
 
