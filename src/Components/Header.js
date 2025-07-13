@@ -9,10 +9,10 @@ function Header() {
 
     function searchData(ev) {
         ev.preventDefault();
-     
-        if(data!==""){
-            navigate("/searchdata/"+data)
-        }else{
+
+        if (data !== "") {
+            navigate("/searchdata/" + data)
+        } else {
             alert("Movie name required");
         }
 
@@ -21,7 +21,7 @@ function Header() {
         <>
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand text-white" href="#">MovieDB</a>
+                    <Link className="navbar-brand text-white" to="/">MovieDB</Link>
                     <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon "></span>
                     </button>

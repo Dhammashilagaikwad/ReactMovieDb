@@ -9,13 +9,15 @@ export default function Moviepage() {
     var [cast, setCast] = useState([]);
 
 
-    let urlValue = useParams();
+    // let urlValue = useParams();
     // console.log(urlValue['movieid']);
+    let { movieid } = useParams();
+    console.log("movieid", movieid)
 
     useEffect(() => {
-        var castApi = `https://api.themoviedb.org/3/movie/${urlValue['movieid']}/credits?api_key=f6866ecb64af726c47ad422d7b08e283&language=en-US`;
+        var castApi = `https://api.themoviedb.org/3/movie/${movieid}/credits?api_key=f6866ecb64af726c47ad422d7b08e283&language=en-US`;
         console.log("castApi", castApi)
-        var movieDetails = `https://api.themoviedb.org/3/movie/${urlValue['movieid']}?api_key=f6866ecb64af726c47ad422d7b08e283&language=en-US`;
+        var movieDetails = `https://api.themoviedb.org/3/movie/${movieid}?api_key=f6866ecb64af726c47ad422d7b08e283&language=en-US`;
 
 
         fetchdata(castApi)
@@ -29,7 +31,7 @@ export default function Moviepage() {
                 console.log(result);
                 setInfo(result);
             })
-    }, [urlValue['movieid']])
+    }, ['movieid'])
 
     return (
         <div className='container'>
@@ -38,9 +40,7 @@ export default function Moviepage() {
                     <h2 className='mt-5 ms-3 fw-bold' >{info.original_title
                     }</h2>
                     <p className='mt-3 mb-0 ms-3 fw-bold'>Rating: {info.vote_average ? info.vote_average.toFixed(1) : "N/A"}</p>
-                    <p className='ms-3'>Release Date: {info.
-                        release_date
-                    }  </p>
+                    <p className='ms-3'>Release Date: {info.release_date}  </p>
                     <p className='ms-3'>Tagline: {info.tagline}</p>
                     <p className='fw-bold fs-5 mb-0'>overview:</p>{info.overview}
                 </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useFetchData(apiPath,extra=[]) {
+function useFetchData(apiPath, extra = []) {
     console.log(apiPath);
     var [record, setRecord] = useState([]);
 
@@ -11,7 +11,7 @@ function useFetchData(apiPath,extra=[]) {
                 console.log(data.results);
                 setRecord(data.results);
             })
-    }, extra);
+    }, [apiPath, ...extra]);
     return record;
 }
 
